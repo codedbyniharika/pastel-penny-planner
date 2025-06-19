@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home - Expense Tracker</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffe6f0, #ffccf9);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .home-card {
+      background-color: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
+      text-align: center;
+      width: 350px;
+    }
+
+    h1 {
+      color: #ff5fa2;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background: linear-gradient(to right, #ff5fa2, #ff88b2);
+      border: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      box-shadow: 0 4px 14px rgba(255, 105, 180, 0.4);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="home-card">
+    <h1 style="margin-bottom: 10px;">💸 Expense Tracker</h1>
+<p style="color: #888; font-size: 14px;">Made with 💖 by <strong>Nix</strong></p>
+
+    <a href="/add"><button class="btn">➕ Add Transaction</button></a><br>
+    <a href="/transactions"><button class="btn">📋 View Transactions</button></a><br>
+    <a href="/insights"><button class="btn">🧠 Insights + Tips</button></a><br>
+    <a href="/report"><button class="btn">📊 View Report</button></a>
+  </div>
+
+</body>
+</html>

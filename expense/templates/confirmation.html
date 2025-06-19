@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Transaction Added</title>
+  <style>
+    /* 🌸 Soft gradient background */
+    body {
+      background: linear-gradient(135deg, #ffe6f0, #ffccf9);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* 💎 Card-style confirmation box */
+    .confirmation-box {
+      background-color: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
+      width: 400px;
+      max-width: 90%;
+      text-align: center;
+    }
+
+    h1 {
+      color: #ff5fa2;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    /* 💖 Stylish buttons */
+    .btn {
+      background: linear-gradient(to right, #ff5fa2, #ff88b2);
+      border: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      box-shadow: 0 4px 14px rgba(255, 105, 180, 0.4);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🎉 Confirmation message in a styled box -->
+  <div class="confirmation-box">
+    <h1>✅ Transaction Added!</h1>
+    <p>Your transaction has been successfully saved.</p>
+
+    <a href="/add" class="btn">➕ Add Another</a>
+    <a href="/" class="btn">🏠 Go to Homepage</a>
+  </div>
+
+</body>
+</html>

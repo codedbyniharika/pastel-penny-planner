@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Monthly Report</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffe6f0, #ffccf9);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .report-card {
+      background-color: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
+      width: 90%;
+      max-width: 700px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #ff5fa2;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 15px;
+      margin-top: 20px;
+    }
+
+    .empty-msg {
+      color: #999;
+      font-size: 16px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="report-card">
+    <h1>📊 Monthly Report</h1>
+
+    {% if chart %}
+      <img src="/static/bar_chart.png" alt="Monthly Chart">
+    {% else %}
+      <p class="empty-msg">🧁 Not enough data yet to generate a chart. Try adding some expenses or income!</p>
+    {% endif %}
+  </div>
+</body>
+</html>

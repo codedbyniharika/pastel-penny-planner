@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Transactions</title>
+  <style>
+    /* 🌸 Soft gradient background */
+    body {
+      background: linear-gradient(135deg, #ffe6f0, #ffccf9);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    /* 💎 Card-style container for the table */
+    .card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
+      width: 90%;
+      max-width: 1000px;
+    }
+
+    h1 {
+      color: #ff5fa2;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    <div class="summary-box">
+  <h2>💰 Summary</h2>
+  <p><strong>Total Income:</strong> ₹{{ total_income }}</p>
+  <p><strong>Total Expenses:</strong> ₹{{ total_expense }}</p>
+  <p><strong>Balance:</strong> ₹{{ balance }}</p>
+</div>
+
+<div class="chart-container">
+  <h3>📊 Monthly Breakdown</h3>
+  <img src="/static/bar_chart.png" alt="Bar Chart" />
+</div>
+
+
+    /* 📊 Styled table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th {
+      background-color: #ffe6e6;
+      color: black;
+      padding: 12px;
+      border: 1.5px solid #ffb6c1;
+    }
+
+    td {
+      background-color: #fff0f5;
+      color: #333;
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #f4c2c2;
+    }
+
+    /* 🖱 Row hover effect */
+    tr:hover td {
+      background-color: #ffe6f0;
+    }
+
+    .summary-box {
+        background-color: #fff0f5;
+        color: #333;
+        padding: 20px;
+        border-radius: 15px;
+        margin-bottom: 30px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(255, 192, 203, 0.2);
+      }
+      
+      .chart-container {
+        margin-top: 30px;
+        text-align: center;
+      }
+      
+      .chart-container img {
+        max-width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+      }
+      
+  </style>
+</head>
+<body>
+
+  <!-- 🌟 Main container card -->
+  <div class="card">
+    <h1>📊 All Transactions</h1>
+    <div class="summary-box">
+        <h2>💰 Summary</h2>
+        <p><strong>Total Income:</strong> ₹{{ total_income }}</p>
+        <p><strong>Total Expenses:</strong> ₹{{ total_expense }}</p>
+        <p><strong>Balance:</strong> ₹{{ balance }}</p>
+      </div>
+      
+      
+      
+    <table>
+      <tr>
+        <th>Date</th>
+        <th>Type</th>
+        <th>Amount</th>
+        <th>Category</th>
+        <th>Note</th>
+      </tr>
+      {% for row in transactions %}
+      <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+
+</body>
+</html>

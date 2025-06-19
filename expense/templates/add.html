@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Transaction</title>
+  <style>
+    /* 🌸 Background with gradient for soft pastel vibe */
+    body {
+      background: linear-gradient(135deg, #ffe6f0, #ffccf9);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;     /* horizontally center */
+      align-items: center;         /* vertically center */
+      height: 100vh;               /* full page height */
+      margin: 0;                   /* remove default margin */
+    }
+
+    /* 🧾 Card-style container for the form */
+    .form-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 20px;         /* round corners */
+      box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2); /* soft glow */
+      width: 400px;
+      max-width: 90%;              /* responsive on smaller screens */
+      text-align: center;
+    }
+
+    /* 🌸 Heading inside the form box */
+    h1 {
+      color: #ff5fa2;
+      margin-bottom: 30px;
+    }
+
+    /* 🏷️ Label styling */
+    label {
+      display: block;
+      text-align: left;
+      margin: 10px 0 5px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    /* 🧾 Input fields and dropdown */
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    /* 💖 Submit button with gradient + hover glow */
+    button {
+      background: linear-gradient(to right, #ff5fa2, #ff88b2);
+      border: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;   /* smooth hover effect */
+    }
+
+    /* 👆 Hover effect: lift + glow */
+    button:hover {
+      box-shadow: 0 4px 14px rgba(255, 105, 180, 0.4);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 💎 The centered card form -->
+  <div class="form-container">
+    <h1>➕ Add Transaction</h1>
+
+    <form action="/add" method="post">
+      <label for="type">Type</label>
+      <select name="type" required>
+        <option value="Income">Income</option>
+        <option value="Expense">Expense</option>
+      </select>
+
+      <label for="amount">Amount</label>
+      <input type="number" name="amount" required>
+
+      <label for="category">Category</label>
+      <input type="text" name="category" required>
+
+      <label for="note">Note</label>
+      <input type="text" name="note">
+
+      <button type="submit">Save Transaction</button>
+    </form>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Insights</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffe6f0, #ffccf9);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background-color: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
+      width: 400px;
+      max-width: 90%;
+      text-align: center;
+    }
+
+    h1 {
+      color: #ff5fa2;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #444;
+      font-size: 16px;
+      margin: 8px 0;
+    }
+
+    .tip {
+      margin-top: 30px;
+      font-style: italic;
+      color: #b366ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🧠 Insights</h1>
+    <p><strong>Total Transactions:</strong> {{ total }}</p>
+    <p><strong>Total Income:</strong> ₹{{ income }}</p>
+    <p><strong>Total Expenses:</strong> ₹{{ expense }}</p>
+    <p><strong>Most Used Category:</strong> {{ top_category }}</p>
+    <p><strong>Average Expense:</strong> ₹{{ avg_expense }}</p>
+
+    <p class="tip">🌸 Tip: {{ tip }}</p>
+  </div>
+</body>
+</html>
