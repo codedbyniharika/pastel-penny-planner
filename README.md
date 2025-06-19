@@ -19,8 +19,6 @@ Track your income and expenses, get monthly insights, and receive gentle financi
 
 ## 🗂️ Project Structure
 
-## 🗂️ Project Structure
-
 ```text
 nix-expense-tracker/
 ├── app.py                 # Main Flask application
